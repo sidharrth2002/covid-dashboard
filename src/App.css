@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    text-align: center;
+    /* min-height: 100%; */
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+#header {
+    background-color: darkred;
+    color: white;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#header h1 {
+    font-size: 4rem;
+}
+
+#header h2 {
+    font-size: 2rem;
+}
+
+/*form {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    margin-bottom: 20px;*/
+/*}*/
+
+/*form input[type=date] {*/
+/*    width: 400px;*/
+/*    margin-top: 20px;*/
+/*    margin-bottom: 20px;*/
+/*    padding: 10px;*/
+/*}*/
+
+/*form input[type=submit] {*/
+/*    padding: 5px;*/
+/*}*/
+
+#date {
+    margin-bottom: 20px;
+}
+
+#stats {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    transition: 0.4s;
+}
+
+.stat{
+    border: 0.5px black solid;
+    width: 250px;
+    height: 250px;
+    margin: 10px auto;
+    padding: 5px;
+    overflow: auto;
+    box-shadow: 0.5px 1.5px;
+    border-radius: 10px;
+    /* animation-duration: 3s; */
+    transition: 1.0s;
+}
+
+/* .stat:nth-child(1), .stat:nth-child(3){
+    animation-name: slidefromleft;
+}
+
+.stat:nth-child(2), .stat:nth-child(4) {
+    animation-name: slidefromright;
+}
+
+@keyframes slidefromleft {
+    from {
+        margin-right: 100%;
+    }
+
+    to {
+        margin-right: 0%;
+    }
+}
+
+@keyframes slidefromright {
+    from {
+        margin-left: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+} */
+
+.stat h2 {
+    height: 40%;
+    border-bottom: 2px black solid;
+}
+
+.stat h3 {
+    font-size: 3rem;
+}
+
+#footer {
+    background-color: darkred;
+    color: white;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* position: absolute; */
+    margin-top: 60px;
+}
+
+#footer p {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+@media screen and (max-width: 767px) {
+    form input[type=date] {
+        width: 80%;
+        margin-right: 0;
+    }
+    #stats {
+        display: block;
+    }
+    #stats {
+        padding: 0;
+    }
+    .stat {
+        width: 100%;
+        box-shadow: none;
+    }
+    .stat h2 {
+        height: 50%;
+    }
+    #footer {
+        position: static;
+    }
+    #footer p {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #footer {
+        position: static;
+    }
+}
